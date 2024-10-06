@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 90vw; /* Responsive width */
+    max-width: 450px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.8rem; /* Responsive font size */
+    color: #3b3b98;
+    font-weight: 600;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: block;
+    color: #555;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #3b3b98;
+    background-color: #f1f3f5;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+    color: #888;
+}
+
+input[type="text"]:focus {
+    border-color: #27ae60;
+}
+
+button {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1e8449;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image {
+    width: 100%;
+    max-height: 320px; /* Max height for large screens */
+    object-fit: contain; /* Ensures image scales correctly */
+    border-radius: 10px;
+    display: none;
+}
+
+#loading {
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90vw; /* Wider on smaller screens */
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"], button {
+        font-size: 0.9rem;
+    }
+
+    .image-container {
+        height: auto; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 95vw;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    input[type="text"], button {
+        font-size: 0.85rem;
+    }
+
+    .image-container {
+        height: auto;
+    }
+
+    #image {
+        max-height: 250px; /* Further adjustment for smaller screens */
+    }
+}
